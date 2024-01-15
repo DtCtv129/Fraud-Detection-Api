@@ -48,9 +48,9 @@ def get_time_period():
     else:
         return "Evening"
 def categorize_distance(distance):
-    if distance < 39.51458312511411:
+    if distance < 200 :
         return "nearby"
-    elif distance < 56.4090045083898:
+    elif distance < 745.6454:
         return "moderate"
     else:
         return "far"
