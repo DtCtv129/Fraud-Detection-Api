@@ -55,16 +55,16 @@ def categorize_distance(distance):
     else:
         return "far"
 def categorize_population(population):
-    if population > 5.640328239467187:
+    if population > 50000:
         return "Highly"
-    elif 4.910818713222447 <= population <=  5.640328239467187:
+    elif 10000 <= population <=  50000:
         return "Moderately"
     else:
         return "Sparsely"
 def categorize_amount(amount):
-    if amount > 5.679355014609812:
+    if amount > 200:
         return "Highly"
-    elif 3.702776454030607 <= amount <= 5.679355014609812:
+    elif 50 <= amount <= 200:
         return "Moderately"
     else:
         return "Sparsely"
