@@ -100,6 +100,7 @@ async def normalizeInput(transaction:Transaction,location):
     noramlizedInput['amount']=categorize_amount(noramlizedInput['amount'])
     noramlizedInput['population']=categorize_population(await get_city_opendata(location['city'],location['country']))
     noramlizedInput['distance']=categorize_distance(geopy.distance.geodesic(tuple(location["loc"].split(',')), (noramlizedInput["merchant"].longitude, noramlizedInput["merchant"].latitude)).miles)
+    noramlizedInput['client_location']=location
     return noramlizedInput
 # Getting User Location 
 async def get_client_ip(request: Request):
